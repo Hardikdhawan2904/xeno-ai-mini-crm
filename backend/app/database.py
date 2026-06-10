@@ -1,17 +1,18 @@
 import os
 from sqlalchemy import create_engine
+from sqlalchemy.engine import make_url
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./crm.db")
+_raw = os.getenv("DATABASE_URL", "sqlite:///./crm.db")
 
-# Railway provides postgres:// — rewrite to pg8000 dialect (pure Python, no binary deps)
-if DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql+pg8000://", 1)
-elif DATABASE_URL.startswith("postgresql://"):
-    DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+pg8000://", 1)
-
-connect_args = {"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {}
+if _raw.startswith("sqlite"):
+    DATABASE_URL = _raw
+    connect_args = {"check_same_thread": False}
+else:
+    _url = make_url(_raw)
+    DATABASE_URL = _url.set(drivername="postgresql+pg8000").render_as_string(hide_password=False)
+    connect_args = {}
 
 engine = create_engine(DATABASE_URL, connect_args=connect_args)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
