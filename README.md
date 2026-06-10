@@ -2,7 +2,30 @@
 
 An AI-native campaign manager that helps retail brands decide **who to talk to**, **what to say**, and **reach them** over messaging channels — then tracks how those messages performed.
 
-Built for the Xeno SDE Internship Assignment 2026.
+AI-native CRM for shopper engagement, audience segmentation, campaign orchestration, and delivery analytics.
+
+---
+
+## Live Demo
+
+Frontend: https://your-vercel-url.vercel.app
+
+Backend API: https://your-backend-url.up.railway.app
+
+Channel Service: https://your-channel-url.up.railway.app
+
+---
+
+## Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### AI Segment Builder
+![Segments](screenshots/segments.png)
+
+### Campaign Analytics
+![Analytics](screenshots/analytics.png)
 
 ---
 
@@ -52,7 +75,7 @@ Real channel providers (Twilio, Gupshup, MSG91) are external — your CRM calls 
 | Campaign Creation | Generates 3 personalized message variants for the marketer to choose from |
 | Campaign Detail | Summarizes delivery + engagement metrics into a 2-sentence performance narrative |
 
-AI is woven into decisions, not a chatbot bolted on the side.
+AI assists marketers at key decision points: audience creation, campaign content generation, and performance analysis.
 
 ---
 
