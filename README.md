@@ -8,11 +8,13 @@ AI-native CRM for shopper engagement, audience segmentation, campaign orchestrat
 
 ## Live Demo
 
-Frontend: https://xeno-ai-mini-crm.vercel.app
-
-Backend API: https://xeno-ai-mini-crm-production.up.railway.app
-
-Channel Service: https://artistic-consideration-production-d8f9.up.railway.app
+| | URL |
+|---|---|
+| Frontend | https://xeno-ai-mini-crm.vercel.app |
+| Backend API | https://xeno-ai-mini-crm-production.up.railway.app |
+| API Docs (Swagger) | https://xeno-ai-mini-crm-production.up.railway.app/docs |
+| Channel Service | https://artistic-consideration-production-d8f9.up.railway.app |
+| GitHub Repo | https://github.com/Hardikdhawan2904/xeno-ai-mini-crm |
 
 ---
 
