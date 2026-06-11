@@ -21,13 +21,19 @@ AI-native CRM for shopper engagement, audience segmentation, campaign orchestrat
 ## Screenshots
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.jpg)
+
+### Customers
+![Customers](screenshots/customers.jpg)
 
 ### AI Segment Builder
-![Segments](screenshots/segments.png)
+![Segments](screenshots/segments.jpg)
+
+### Campaigns
+![Campaigns](screenshots/campaigns.jpg)
 
 ### Campaign Analytics
-![Analytics](screenshots/analytics.png)
+![Analytics](screenshots/analytics.jpg)
 
 ---
 
