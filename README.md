@@ -66,8 +66,8 @@ AI-native CRM for shopper engagement, audience segmentation, campaign orchestrat
 └─────────────────────────────────────┘
            │
 ┌──────────▼──────────────────────────┐
-│   PostgreSQL (Production, Railway)   │
-│     SQLite (Local Development)       │
+│          PostgreSQL (Railway)         │
+│       local + production             │
 └─────────────────────────────────────┘
 ```
 
