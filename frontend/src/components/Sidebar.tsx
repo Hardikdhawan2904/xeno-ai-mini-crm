@@ -14,7 +14,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-56 min-h-screen bg-slate-900 text-white flex flex-col shrink-0">
+    <aside className="w-56 h-screen sticky top-0 bg-slate-900 text-white flex flex-col shrink-0">
       <div className="px-6 py-5 border-b border-slate-700">
         <span className="font-bold text-lg tracking-tight text-indigo-400">Xeno CRM</span>
         <p className="text-xs text-slate-400 mt-0.5">Mini Campaign Manager</p>
