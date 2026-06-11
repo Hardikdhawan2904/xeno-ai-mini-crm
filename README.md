@@ -107,7 +107,7 @@ AI assists marketers at key decision points: audience creation, campaign content
 | Frontend | Next.js 14, TypeScript, Tailwind CSS |
 | CRM Backend | Python, FastAPI, SQLAlchemy |
 | Channel Service | Python, FastAPI, httpx |
-| Database | SQLite (local) / PostgreSQL (production) |
+| Database | PostgreSQL (local + production via Railway) |
 | AI | Groq API — llama-3.3-70b-versatile |
 | Hosting | Vercel (frontend) + Railway (backend + channel service) |
 
@@ -184,7 +184,7 @@ The two-service, callback-driven architecture was chosen deliberately — it is 
 
 ## Tradeoffs Made
 
-- **SQLite locally** — zero-config for demo; env var switches to PostgreSQL for Railway with one line change
+- **SQLite locally (optional)** — zero-config fallback if no DATABASE_URL is set; env var switches to PostgreSQL for both local and production
 - **No auth** — out of scope per assignment; would add JWT + Supabase Auth in production
 - **Polling over WebSockets** — simpler to reason about and debug; acceptable at this scale
 - **Groq llama-3.3-70b** — fast and free tier is generous; swappable via a single env var
