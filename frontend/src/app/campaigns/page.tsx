@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { getCampaigns, getSegments, createCampaign, aiMessages } from "@/lib/api";
+import { getCampaigns, getSegments, createCampaign, aiMessages, deleteCampaign } from "@/lib/api";
 import type { Campaign, Segment } from "@/lib/types";
 
 const CHANNELS = ["whatsapp", "sms", "email", "rcs"];
@@ -129,11 +129,16 @@ export default function CampaignsPage() {
                     </p>
                     <p className="text-sm text-slate-500 mt-2 line-clamp-1">{c.message}</p>
                   </div>
-                  <div className="flex gap-5 ml-6 shrink-0">
+                  <div className="flex items-center gap-5 ml-6 shrink-0">
                     <StatPill label="Sent" value={c.stats.sent} />
                     <StatPill label="Delivered" value={c.stats.delivered} />
                     <StatPill label="Opened" value={c.stats.opened} />
                     <StatPill label="Clicked" value={c.stats.clicked} />
+                    <button
+                      onClick={async (e) => { e.preventDefault(); await deleteCampaign(c.id); load(); }}
+                      className="text-slate-300 hover:text-rose-500 text-sm ml-1"
+                      title="Delete campaign"
+                    >✕</button>
                   </div>
                 </div>
               </div>

@@ -113,6 +113,17 @@ def campaign_insights(campaign_id: int, db: Session = Depends(get_db)):
     return {"insights": insight}
 
 
+@router.delete("/{campaign_id}")
+def delete_campaign(campaign_id: int, db: Session = Depends(get_db)):
+    campaign = db.query(Campaign).filter(Campaign.id == campaign_id).first()
+    if not campaign:
+        raise HTTPException(status_code=404, detail="Campaign not found")
+    db.query(Communication).filter(Communication.campaign_id == campaign_id).delete()
+    db.delete(campaign)
+    db.commit()
+    return {"ok": True}
+
+
 @router.get("/overview/stats")
 def overview_stats(db: Session = Depends(get_db)):
     from ..models import Customer

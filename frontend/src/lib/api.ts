@@ -57,6 +57,9 @@ export const createCampaign = (data: unknown) =>
     body: JSON.stringify(data),
   });
 
+export const deleteCampaign = (id: number) =>
+  req(`/api/campaigns/${id}`, { method: "DELETE" });
+
 export const getCampaignInsights = (id: number) =>
   req<{ insights: string }>(`/api/campaigns/${id}/insights`);
 
