@@ -29,7 +29,7 @@ def build_customer_query(filters: dict, db: Session):
         cutoff = datetime.utcnow() - timedelta(days=filters["active_days"])
         query = query.filter(Customer.last_order_at >= cutoff)
     if "city" in filters:
-        query = query.filter(Customer.city == filters["city"])
+        query = query.filter(Customer.city.ilike(filters["city"]))
 
     return query
 
