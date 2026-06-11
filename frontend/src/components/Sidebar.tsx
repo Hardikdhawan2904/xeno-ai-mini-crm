@@ -41,7 +41,7 @@ export default function Sidebar() {
       </nav>
 
       <div className="px-5 py-4 border-t border-slate-700 text-xs text-slate-500">
-        Xeno Internship Assignment
+        Built for Xeno Internship Assignment
       </div>
     </aside>
   );
