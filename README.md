@@ -6,6 +6,12 @@ AI-native CRM for shopper engagement, audience segmentation, campaign orchestrat
 
 ---
 
+## Walkthrough Video
+
+[![Watch the walkthrough](https://img.shields.io/badge/Loom-Watch%20Demo-blueviolet?logo=loom)](https://www.loom.com/share/088fdad3b0894797a15b2ac7066a3007)
+
+---
+
 ## Live Demo
 
 | Service | URL |
@@ -14,6 +20,7 @@ AI-native CRM for shopper engagement, audience segmentation, campaign orchestrat
 | Backend API | https://xeno-ai-mini-crm-production.up.railway.app |
 | API Docs (Swagger) | https://xeno-ai-mini-crm-production.up.railway.app/docs |
 | Channel Service | https://artistic-consideration-production-d8f9.up.railway.app |
+| Walkthrough Video | https://www.loom.com/share/088fdad3b0894797a15b2ac7066a3007 |
 | GitHub Repo | https://github.com/Hardikdhawan2904/xeno-ai-mini-crm |
 
 > Public demo environment — no authentication required.
