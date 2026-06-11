@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getSegments, createSegment, aiSegment } from "@/lib/api";
+import { getSegments, createSegment, aiSegment, deleteSegment } from "@/lib/api";
 import type { Segment } from "@/lib/types";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -108,7 +108,14 @@ export default function SegmentsPage() {
                     <p className="text-xs text-slate-400 mt-0.5 line-clamp-2">{s.description}</p>
                   )}
                 </div>
-                <span className="text-indigo-600 font-bold text-lg ml-2">{s.customer_count}</span>
+                <div className="flex items-center gap-2 ml-2">
+                  <span className="text-indigo-600 font-bold text-lg">{s.customer_count}</span>
+                  <button
+                    onClick={async () => { await deleteSegment(s.id); load(); }}
+                    className="text-slate-300 hover:text-rose-500 text-sm"
+                    title="Delete segment"
+                  >✕</button>
+                </div>
               </div>
               <FilterTags filters={s.filters} />
               <p className="text-xs text-slate-400 mt-3">

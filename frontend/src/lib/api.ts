@@ -36,6 +36,9 @@ export const createSegment = (data: unknown) =>
     body: JSON.stringify(data),
   });
 
+export const deleteSegment = (id: number) =>
+  req(`/api/segments/${id}`, { method: "DELETE" });
+
 export const previewSegment = (id: number) =>
   req<{ count: number; sample: { id: number; name: string; city: string; total_spend: number }[] }>(
     `/api/segments/${id}/preview`
